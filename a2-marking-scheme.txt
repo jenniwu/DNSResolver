@@ -1,0 +1,90 @@
+Total before late penalty: [68/66]
+
+NOTE: in the marking report something left blank (e.g.  [ /6]) typically means
+that you got full marks for that item. 
+
+Partner Bonus [/2]
+
+
+General Functionality: [/40]
+
+   [/2] Basic query to a name server that is authoritative.
+   	(e.g. www.cs.ubc.ca to 198.162.35.1)
+
+   [/5] Basic Query that starts at root server and works to an
+        authoritative server in a straightforward path.
+        (e.g. www.cs.ubc.ca to a root name server)
+
+   [/5] A basic type query that results in a CNAME and the need to
+        restart the search for the alias. (e.g. prep.ai.mit.edu)
+
+   [/3] A query that returns a name server to use where the name
+        server's address isn't provided. (e.g. www.stanford.edu)
+
+   [/3] A complicated lookup series that potentially involves multiple
+        cnames and DNS server name lookups (finance.google.ca)
+
+   [/3] Can deal with information in the additional information
+        section when not all of it is of interest/use
+        (e.g. groups.yahoo.com)
+
+   [/3] Can deal with unconventional but valid response records
+        (e.g. uncompressed RR names, compression of the query name).
+
+   [/3] Adds all resource records retrieved from the server to the
+        cache.
+
+   [/2] Uses cached data when available (for a regular query).
+
+   [/3] Uses cached data when available (for a CNAME query).
+
+   [/2] The TTL reported is the last TTL from the A (or AAAA) record 
+        when a CNAME is involved.
+
+   [/2] Uses IPv4 nameserver even when IPv6 request is done.
+
+   [/2] If a query returns more than IP address all IP addresses
+        are printed.
+
+   [/2] Is able to properly request and parse A, AAAA, NS and CNAME
+        records.
+
+Error Handling: [/8]
+
+   [/2] Timeout - nameserver doesn't respond
+
+   [/2] Too many queries (e.g. loop1.csproject.org)
+
+   [/2] Name does not resolve (e.g. wee.cs.ubc.ca)
+
+   [/2] Other types of errors (e.g. just do a lookup of  .ca)
+
+Tracing: [/9]
+
+  [/1] Prints query ID, server being queried and FQDN
+  
+  [/1] Query ID is different for every query during a run
+  
+  [/1] Prints Response ID line, with query ID and whether or not this
+       is an authoritative response
+
+  [/1] Prints the counts for the Answers, Namservers, and Additional
+       Information fields.
+
+  Printing of the Response Records
+
+  [/1] Prints A in proper format
+  [/1] Prints AAAA  in proper format
+  [/1] Prints CNAMES in proper format
+  [/1] Prints NS in proper format
+  [/1] Prints type number if not in above
+
+Broad Marking Criteria :                     [/9] 
+See assignment description for a detailed description of this marking criteria
+
+     Readability        [/3]
+     Code Documentation [/3]
+     Code Quality       [/3]
+
+
+MARKER'S ADDITIONAL COMMENTS: Good job!
